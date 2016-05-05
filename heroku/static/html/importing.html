@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{{ import_status }}
+<br><br>
+<form action="/import/">
+	<input type="submit" value="Back to Import" class="btn">
+</form>
+<form action="//">
+	<input type="submit" value="Home" class="btn">
+</form>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if org %}
+	<table class="table table-striped">
+		<tr><td>{{ org.name}}</td></tr>
+		<tr><td>{{ org.wcdb_id }}</td></tr>
+		<tr><td>{{ org.kind }}</td></tr>
+		<tr><td>{{ org.location }}</td></tr>
+		<tr><td>
+			{% for p in r_people %}
+				{{ p.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>
+			{% for c in r_crises %}
+				{{ c.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>{{ org.history|safe }}</td></tr>
+		<tr><td>{{ org.contact|safe }}</td></tr>
+		<tr><td>{{ org.citations|safe }}</td></tr>
+		<tr><td>{{ org.extLinks|safe }}</td></tr>
+		<tr><td>{{ org.images|safe }}</td></tr>
+		<tr><td>{{ org.videos|safe }}</td></tr>
+		<tr><td>{{ org.maps|safe }}</td></tr>
+		<tr><td>{{ org.feeds|safe }}</td></tr>
+		<tr><td>{{ org.summary }}</td></tr>
+
+	</table>
+{% else %}
+	<p>Organization was not found.</p>	
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% if crisis %}
+    <ul>
+        <li>{{ crisis.name|safe }}</li>
+    	<li>{{ crisis.wcdb_id }}</li>  
+		<li>{{ crisis.name }}</li>  
+		<li>{{ crisis.people }}</li>  
+		<li>{{ crisis.organizations }}</li>  
+		<li>{{ crisis.kind }}</li>  
+		<li>{{ crisis.date }}</li>  
+		<li>{{ crisis.locations }}</li>  
+		<li>{{ crisis.humanImpact }}</li>  
+		<li>{{ crisis.economicImpact }}</li>  
+		<li>{{ crisis.resources }}</li>  
+		<li>{{ crisis.waysToHelp }}</li>  
+		<li>{{ crisis.citations|safe }}</li>  
+		<li>{{ crisis.extLinks|safe }}</li>  
+		<li>{{ crisis.images|safe }}</li>  
+		<li>{{ crisis.videos|safe }}</li>  
+		<li>{{ crisis.maps|safe }}</li>  
+		<li>{{ crisis.feeds|safe }}</li>  
+		<li>{{ crisis.summary|safe }}</li>  
+    </ul>
+{% else %}
+    <p>Crisis was not found.</p>	
+{% endif %}

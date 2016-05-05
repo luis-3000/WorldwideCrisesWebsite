@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+	{% block content %}
+		<center>
+			{% if user.is_authenticated %}
+				Logged in.<br />
+			{% else %}
+				Not logged in.<br />
+			{% endif %}
+			<a href="http://bulbapedia.bulbagarden.net/wiki/Special:Random"><img src="{{ STATIC_URL }}/img/team_rocket.png" /></a><br />
+			<h2>Members</h2>
+			{% for member in member_list %}
+				{{ member }}<br />	
+			{% endfor %}
+			<br />
+			<h2>Motto</h2>
+			Prepare for trouble,<br />	
+			And Make it double!<br />	
+			To protect the world from devastaion,<br />	
+			To unite all people within our nation,<br />	
+			To denounce the evil of truth and love,<br />	
+			To extend our reach to the stars of above,<br />	
+			Jessie!<br />	
+			James!<br />	
+			Team Rocket blast off at the speed of light!<br />	
+			Surrender now or prepare to fight!<br />	
+			Meowth, Thats Right!
+		</center>
+	{% endblock %}

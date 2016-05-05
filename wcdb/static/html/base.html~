@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load bootstrap_toolkit %}
+{% load url from future %}
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title> Team Rocket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+  
+  <!-- HTML5 Support for IE -->
+  <!--[if lt IE 9]>
+  <script src="http://responsivewebinc.com/canisha/wp-content/themes/canisha/js/html5shim.js"></script>
+  <![endif]-->
+		
+  <!-- Stylesheets -->
+    <link href="http://responsivewebinc.com/canisha/wp-content/themes/canisha/style/bootstrap.css" rel="stylesheet">
+    <link href="http://responsivewebinc.com/canisha/wp-content/themes/canisha/style/animate.min.css" rel="stylesheet">
+    <link href="http://responsivewebinc.com/canisha/wp-content/themes/canisha/style/flexslider.css" rel="stylesheet">
+    <link href="http://responsivewebinc.com/canisha/wp-content/themes/canisha/style/prettyPhoto.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://responsivewebinc.com/canisha/wp-content/themes/canisha/style/font-awesome.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="http://responsivewebinc.com/canisha/wp-content/themes/canisha/style/font-awesome-ie7.css">
+  <![endif]-->		
+    <link href="http://responsivewebinc.com/canisha/wp-content/themes/canisha/style.css" rel="stylesheet">
+    <link href="http://responsivewebinc.com/canisha/wp-content/themes/canisha/style/bootstrap-responsive.css" rel="stylesheet">
+
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="http://t2.gstatic.com/images?q=tbn:ANd9GcT2Q4Q0ZT_nIx53m0HbigYqNbmGdqd91fZzQOWz4oYLOx2yYdpN">
+    <link rel="pingback" href="http://responsivewebinc.com/canisha/xmlrpc.php" />
+    <link rel="alternate" type="application/rss+xml" title="Canisha &raquo; Home Page Comments Feed" href="http://responsivewebinc.com/canisha/?feed=rss2&#038;page_id=7" />
+    <script type='text/javascript' src='http://responsivewebinc.com/canisha/wp-includes/js/comment-reply.js?ver=3.4.2'></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://responsivewebinc.com/canisha/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://responsivewebinc.com/canisha/wp-includes/wlwmanifest.xml" /> 
+    <link rel='prev' title='Portfolio' href='http://responsivewebinc.com/canisha/?page_id=17' />
+    <link rel='next' title='Service' href='http://responsivewebinc.com/canisha/?page_id=34' />
+    <meta name="generator" content="WordPress 3.4.2" />
+    <link rel='canonical' href='http://responsivewebinc.com/canisha/' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body>
+
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="{% url 'db_app.views.index' %}">WCDB</a>
+            <ul class="nav">
+                <li><a href="{% url 'db_app.views.index' %}" class="">Home</a></li>
+                <li><a href="{% url 'db_app.views.list_crises' %}" class="">Crises</a></li>
+                <li><a href="{% url 'db_app.views.list_people' %}" class="">People</a></li>
+                <li><a href="{% url 'db_app.views.list_organizations' %}" class="">Organizations</a></li>
+                <li><a href="{% url 'db_app.views.web_import_xml' %}">Import</a></li>
+                <li><a href="{% url 'db_app.views.web_export_xml' %}">Export</a></li>
+                <li><a href="{% url 'db_app.views.login' %}">Login</a></li>
+                <li><a href="{% url 'db_app.views.logout' %}">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    {% bootstrap_messages %}
+
+    {% block content %}Empty page{% endblock %}
+
+    <p><hr></p>
+
+    <footer class="row">
+        <div class="span6">
+            <p>World Crises Database</p>
+        </div>
+        <div class="span6" style="text-align:right">
+            <p>
+                Team Rocket
+            </p>
+        </div>
+    </footer>
+
+</div> <!-- container -->1
+
+</body>
+</html>

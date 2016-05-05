@@ -1,0 +1,116 @@
+import sys
+import datetime
+from models import Crisis, Organization, Person
+
+#returns objects
+def people_with_most_images:
+	people = []
+	num = -1
+	for p in people :
+		count = p.images.count('\n')
+		if count > num :
+			people = []
+			people.append(p)
+			num = count
+		elif num == count :
+			people.append(p)
+
+	return people
+
+#returns objects
+def ND_assocated_with_most_organizations:
+	crisis = []
+	num = -1
+	for c in Crisis.objects.all():
+		count = c.organizations_text.count('\n')
+		if count > num :
+			crisis = []
+			crisis.append(c)
+			num = count 
+		elif count == num :
+			crisis.append(c)
+
+	return crisis
+
+#returns objects
+def 2005_2010_crisis:
+	return Crisis.objects.all().filter(date > datetime.datetime(2004,11,31,23,59,59))
+
+#returns list [recources, ways to help]
+def ways_to_help_resources_crisis_lt_2_orgs:
+	resources = []
+	ways_to_hlep = []
+	for c in Crisis.objects.all():
+		count = c.organizations_text.count('\n')
+		if count < 2 :
+			resources.append(str(c.resources))
+			ways_to_help.append(str(c.waysToHelp) )
+
+	retval = []
+	retval.append(recources)
+	retval.append(ways_to_help)
+	return retval
+
+#returns list [locations, maps]
+def loc_map_crisis:
+	locs = []
+	maps = []
+	for c in Crisis.objects.all():
+		locs.append(str(c.locations))
+		maps.append(str(c.maps))
+
+	retval = []
+	retval.append(locs)
+	retval.append(maps)
+	return retval
+
+#returns objects
+def alpha_crisis:
+	return Crisis.objects.order_by('name')
+
+#returns objects
+def org_since_1963:
+	return Organization.objects.all().filter(date > datetime.datetime(1962,11,31,23,59,59))
+
+def name_eco_ND_after_2001:
+	names = []
+	eco = []
+	cris = Crisis.objects.all().filter(date > datetime.datetime(2000,11,31,23,59,59))
+	for c in cris :
+		name.append(c.names)
+		eco.append(c.economicImpact)
+
+	retval = []
+	retval.append(names)
+	retval.append(eco)
+	return retval
+
+#returns list [names, types, locs]
+def name_type_location_orgs:
+	names = []
+	types = []
+	locs = []
+	for o in Organization.objects.all() :
+		names.append(o.name)
+		types.append(o.type)
+		locs.append(o.location)
+
+	retval = []
+	retval.append(names)
+	retval.append(types)
+	retval.append(locs)
+	return retval
+#returns list [ids, contact]
+def id_contact_orgs_with_multiple_crisis:
+	count = 0
+	ids = []
+	contact = []
+	for o in Organization.objects.all():
+		count = o.crisis_text.count('\n')
+		if count > 1 :
+			ids.append(o.wcdb_id)
+			contact.append(o.contact)
+	retval = []
+	retval.append(ids)
+	retval.append(contact)
+	return retval

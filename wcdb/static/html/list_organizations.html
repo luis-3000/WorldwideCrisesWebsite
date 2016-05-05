@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if organization_list %}
+    <table class="table table-striped">
+    <thead>
+    	<tr>
+    		<th>Person</th>
+    		<th>Kind</th>
+    		<th>Location</th>
+    	</tr>
+    </thead>
+    <tbody>
+    {% for organization in organization_list %}
+    <tr>
+        <td><a href="/organization/{{ organization.id }}/">{{ organization.name }}</a></td>
+        <td>{{ organization.kind }}</td>
+        <td>{{ organization.date }}</td>
+        <td>{{ organization.location }}</td>
+	</tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% else %}
+    <p>No organizations are available.</p>	
+{% endif %}
+
+{% endblock %}

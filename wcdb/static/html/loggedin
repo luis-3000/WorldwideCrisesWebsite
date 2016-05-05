@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if login_status %}
+{{ login_status }}
+{% else %}
+Login successful.
+{% endif %}
+<br><br>
+<form action="/crisis/">
+	<input type="submit" value="Continue" class="btn btn-success">
+</form>
+
+{% endblock %}

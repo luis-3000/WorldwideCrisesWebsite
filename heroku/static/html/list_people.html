@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if people_list %}
+    <table class="table table-striped">
+    <thead>
+    	<tr>
+    		<th>Person</th>
+    		<th>Kind</th>
+    		<th>Location</th>
+    	</tr>
+    </thead>
+    <tbody>
+    {% for person in people_list %}
+    <tr>
+        <td><a href="/person/{{ person.id }}/">{{ person.name }}</a></td>
+        <td>{{ person.kind }}</td>
+        <td>{{ person.date }}</td>
+        <td>{{ person.location }}</td>
+	</tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% else %}
+    <p>No people are available.</p>	
+{% endif %}
+
+{% endblock %}

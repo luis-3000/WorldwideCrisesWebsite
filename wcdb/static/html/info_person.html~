@@ -1,0 +1,338 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if person %}
+
+	
+	<div class="head">
+		<div class="container">
+      			<div class="row">
+        	 		<div class="span12">
+        	    			<!-- Some text -->
+        	   			<p class="head-one">{{ person.name }}</p>
+        	   			<p class="head-two">WCDB ID: {{ person.wcdb_id }}</p>
+        	 		</div>
+      			</div>
+   		</div>
+	</div>
+
+
+ <ul id="page_content">
+                <li id="info_bar">
+                    <dl>
+                    <a href="http://raoulpop.files.wordpress.com/2008/10/george-w-bush-41.jpeg " 
+                    class="lightview" 
+                    data-lightview-group="primary"  
+                    data-lightview-caption="Close up of George Bush 
+                    
+                     ">
+                        <img id="primary_image" src="http://raoulpop.files.wordpress.com/2008/10/george-w-bush-41.jpeg "/>
+                    </a>            
+                    <div class="bar"></div>
+                        
+                        <dt>Type</dt>
+                        <dd>Former U.S. President</dd>
+                    
+                       
+                        <dt>Nationality</dt>
+                        <dd>American</dd> 
+                      
+
+                      
+
+                        
+                        <dt>Birthday</dt>
+                        <dd> 
+                            07-06-1946
+                        </dd>
+                      
+
+                      
+                      
+
+                    <div class="bar"></div>
+                    
+                    <dt>Social Network Links</dt>
+                    <dd>           
+                        <ul>
+                        
+                            <li><a href="https://www.facebook.com/georgewbush ">Facebook concerning George W. Bush  </a></li>
+                        
+                        </ul>
+                    </dd>
+
+                    
+                    <div class="bar"></div>
+                        
+                        <dt>Related Crises</dt>
+                        <dd>
+                            <ol>
+                            
+                                <li>
+                                    <a href="/crises/hurricane_katrina">Hurricane Katrina
+                                    <div class="vignette_image">
+                                        <img src="http://i.imgur.com/rJlKz.jpg" class="story_image" />
+                                        <div class="highlight_triangle" ></div>
+                                    </div></a>
+                                </li>
+                            
+                            </ol>
+                        </dd>
+                    
+                    
+                    <div class="bar"></div>
+                        
+                        <dt>Related Organizations</dt>
+                        <dd>
+                            <ol>
+                            
+                                <li>
+                                    <a href="/organizations/fema">Federal Emergency Management Agency (FEMA)
+                                    <div class="vignette_image">
+                                        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/US-FEMA-Pre2003Seal.svg/200px-US-FEMA-Pre2003Seal.svg.png " class="story_image" />
+                                        <div class="highlight_triangle" ></div>
+                                    </div></a>
+                                </li>
+                            
+                            </ol>
+                        </dd>
+                    
+                    
+
+                      
+
+                    </dl>
+                </li>
+
+                <li id="content_bar">
+                    <h3>Images</h3>
+                    <ul class="media_list">
+                        
+                        <li>
+                            <a 
+                            href="http://2.bp.blogspot.com/-Uzt-NHCMauE/T1x2uuIcLDI/AAAAAAAABEU/l-2HG5Z3NQ0/s1600/george-w-bush-speech.jpg" 
+                            class="lightview" 
+                    data-lightview-caption="George Bush Speech 
+                    
+                     "
+                            data-lightview-group="images">
+                                <img id="description_picture" 
+                                src="http://2.bp.blogspot.com/-Uzt-NHCMauE/T1x2uuIcLDI/AAAAAAAABEU/l-2HG5Z3NQ0/s1600/george-w-bush-speech.jpg"/>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a 
+                            href="http://www.jlcauvin.com/wp-content/uploads/2009/05/gallery-president-george-001.jpg" 
+                            class="lightview" 
+                    data-lightview-caption="George Bush at Podium 
+                    
+                     "
+                            data-lightview-group="images">
+                                <img id="description_picture" 
+                                src="http://www.jlcauvin.com/wp-content/uploads/2009/05/gallery-president-george-001.jpg"/>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a 
+                            href="http://blog.chron.com/txpotomac/files/2011/05/George_W_Bush.jpg" 
+                            class="lightview" 
+                    data-lightview-caption="George Bush Talk 
+                    
+                     "
+                            data-lightview-group="images">
+                                <img id="description_picture" 
+                                src="http://blog.chron.com/txpotomac/files/2011/05/George_W_Bush.jpg"/>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a 
+                            href="http://bdnpull.bangorpublishing.netdna-cdn.com/wp-content/uploads/2012/05/president-george-w-bush.jpg" 
+                            class="lightview" 
+                    data-lightview-caption="George Bush Oval Office 
+                    
+                     "
+                            data-lightview-group="images">
+                                <img id="description_picture" 
+                                src="http://bdnpull.bangorpublishing.netdna-cdn.com/wp-content/uploads/2012/05/president-george-w-bush.jpg"/>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    <div class="bar"  style="clear:both;" ></div>
+                    
+                    <h3>Videos</h3>
+                    <ul class="media_list">
+                        
+                        <li>
+                            <div class="video_set">
+                                <img id="description_videos" 
+                                src="http://img.youtube.com/vi/ClGv2kiV770/0.jpg"/>
+                                
+                                
+                                <a 
+                                href='http://www.youtube.com/embed/ClGv2kiV770' 
+                                class="lightview" 
+                                data-lightview-type="iframe" 
+                    data-lightview-caption="Bush response to Kanye for Katrina 
+                    
+                     "
+                                data-lightview-group="videos">
+                                </a>
+                                
+
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="video_set">
+                                <img id="description_videos" 
+                                src="http://img.youtube.com/vi/rXzgMdj5urs/0.jpg"/>
+                                
+                                
+                                <a 
+                                href='http://www.youtube.com/embed/rXzgMdj5urs' 
+                                class="lightview" 
+                                data-lightview-type="iframe" 
+                    data-lightview-caption="President George W. Bush Inaugural Address 
+                    
+                     "
+                                data-lightview-group="videos">
+                                </a>
+                                
+
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="video_set">
+                                <img id="description_videos" 
+                                src="http://img.youtube.com/vi/k8az4CfEDpw/0.jpg"/>
+                                
+                                
+                                <a 
+                                href='http://www.youtube.com/embed/k8az4CfEDpw' 
+                                class="lightview" 
+                                data-lightview-type="iframe" 
+                    data-lightview-caption="George Bush Apology for Katrina 
+                    
+                     "
+                                data-lightview-group="videos">
+                                </a>
+                                
+
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="video_set">
+                                <img id="description_videos" 
+                                src="http://img.youtube.com/vi/17hjO8vfigg/0.jpg"/>
+                                
+                                
+                                <a 
+                                href='http://www.youtube.com/embed/17hjO8vfigg' 
+                                class="lightview" 
+                                data-lightview-type="iframe" 
+                    data-lightview-caption="President Bush Warns Of Hurricane Katrina  
+                    
+                     "
+                                data-lightview-group="videos">
+                                </a>
+                                
+
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    
+                    <div class="bar"  style="clear:both;" ></div>
+                    
+                    <dt>About</dt>
+                    <dd>
+                        
+                        <p>George Walker Bush (born July 6, 1946) is an American politician and businessman who was the 43rd President of the United States from 2001 to 2009 and the 46th Governor of Texas from 1995 to 2000. The eldest son of Barbara Bush and George H. W. Bush, he was born in New Haven, Connecticut. After graduating from Yale University in 1968 and Harvard Business School in 1975, Bush worked in oil businesses. He married Laura Welch in 1977 and ran unsuccessfully for the House of Representatives shortly thereafter. He later co-owned the Texas Rangers baseball team before defeating Ann Richards in the 1994 Texas gubernatorial election. In a close and controversial election, Bush was elected president in 2000, becoming the fourth president to be elected despite receiving less popular votes nationwide than his opponent. Bush is the second president to have been the son of a former president. He is also the brother of Jeb Bush, former Governor of Florida.</p>
+                        
+                        
+                        
+                        <p></p>
+                        
+                        
+                        
+                        <p>Eight months into Bush's first term as president, the September 11, 2001 terrorist attacks occurred. In response, Bush announced the War on Terror, an international military campaign which included the war in Afghanistan launched in 2001 and the war in Iraq launched in 2003. In addition to national security issues, Bush also promoted policies on the economy, health care, education, and social security reform. He signed into law broad tax cuts, the PATRIOT Act, the No Child Left Behind Act, the Partial-Birth Abortion Ban Act, and Medicare prescription drug benefits for seniors. His tenure saw national debates on immigration, Social Security, electronic surveillance, and enhanced interrogation techniques. His administration also withdrew the U.S. from the Kyoto Protocol on global warming.</p>
+                        
+                        
+                        
+                        <p></p>
+                        
+                        
+                        
+                        <p>Bush successfully ran for re-election against Democratic Senator John Kerry in 2004, in another relatively close election. After his re-election, Bush received increasingly heated criticism from across the political spectrum. In 2005, the Bush Administration dealt with widespread criticism over its handling of Hurricane Katrina. Following this and other controversies, as well as the growing unpopularity of the Iraq War, Democrats won control of Congress in the 2006 elections. In December 2007, the United States entered its longest post-World War II recession, prompting the Bush Administration to enact multiple economic programs intended to preserve the country's financial system. Though Bush was popular in the U.S. for much of his first term, his popularity declined sharply during his second term. He was a highly controversial figure internationally, with public protests occurring even during visits to close allies, such as the United Kingdom.</p>
+                        
+                        
+                        
+                        <p></p>
+                        
+                        
+                        
+                        <p>After leaving office, Bush returned to Texas and purchased a home in a suburban area of Dallas. He is currently a public speaker and has written a book about his life entitled Decision Points.</p>
+                        
+                        
+                        
+                    </dd>
+                    
+                    <div class="bar"></div>
+                    
+                    <dt>External Links / Sources</dt>
+                    <dd>
+                        <ul>
+                        
+                            <li><a href="http://en.wikipedia.org/wiki/George_W._Bush ">Wikipedia Article concerning George W. Bush  </a></li>
+                        
+                        </ul>
+                    </dd>
+                
+                </li>
+            </ul>
+
+
+
+	
+	
+<table class="table table-striped">
+		<tr><td>Name: {{ person.name }}</td></tr>
+		<tr><td>WCDB ID: {{ person.wcdb_id }}</td></tr>
+		<tr><td>Kind: {{ person.kind }}</td></tr>
+		<tr><td>Location: {{ person.location }}</td></tr>
+		<tr><td>Relevant Organizations:
+			{% for o in r_orgs %}
+				{{ o.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>Relevant Crises:
+			{% for c in r_crises %}
+				{{ c.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>Citations: {{ person.citations|safe }}</td></tr>
+		<tr><td>External Links: {{ person.extLinks|safe }}</td></tr>
+		<tr><td>{{ imgs|safe }}</td></tr>
+		<tr><td>{{ vids|safe }}</td></tr>
+		<tr><td>{{ maps|safe }}</td></tr>
+<!-- 		<tr><td>{{ person.images|safe }}</td></tr>
+		<tr><td>{{ person.videos|safe }}</td></tr>
+		<tr><td>{{ person.maps|safe }}</td></tr> -->
+		<tr><td>Feeds: {{ person.feeds|safe }}</td></tr>
+		<tr><td>{{ person.summary }}</td></tr>
+	</table>
+
+    		
+{% else %}
+	<p>Person was not found.</p>	
+{% endif %}
+
+{% endblock %}

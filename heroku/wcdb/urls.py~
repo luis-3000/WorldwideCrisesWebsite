@@ -1,0 +1,36 @@
+from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
+
+# Uncomment the next two lines to enable the admin:
+from django.contrib import admin
+admin.autodiscover()
+
+urlpatterns = patterns('',
+	# Home Screen
+	url(r'^$', 'views.index', name='INDEX'),
+
+	# Login/Logout
+	url(r'^login/$', 'db_app.views.login', name='LOGIN'),
+	url(r'^logout/$', 'db_app.views.logout', name='LOGOUT'),
+
+	# Lists Views
+	url(r'^crisis/$', 'views.list_crises', name ='CRISES'),
+	url(r'^person/$', 'views.list_people', name='PEOPLE'),
+	url(r'^organization/$', 'views.list_organizations', name='ORGANIZATIONS'),
+
+	# Information Views
+	url(r'^crisis/(?P<crisis_id>\d+)/$', 'views.info_crisis'),
+	url(r'^person/(?P<person_id>\d+)/$', 'views.info_person'),
+	url(r'^organization/(?P<organization_id>\d+)/$', 'views.info_organization'),
+
+	# Import/Export
+	url(r'^import/$', 'db_app.views.web_import_xml', name='IMPORT'),
+	url(r'^export/$', 'db_app.views.web_export_xml', name='EXPORT'),
+	url(r'^export_display/$', 'db_app.views.export_display', name='DISPLAY'),
+
+	# Admin documentation:
+	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+
+	# Admin:
+	url(r'^admin/', include(admin.site.urls)),
+)

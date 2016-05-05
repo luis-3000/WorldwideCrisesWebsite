@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if crisis %}
+	<table class="table table-striped">
+		<tr><td>{{ crisis.name }}</td></tr>
+		<tr><td>{{ crisis.wcdb_id }}</td></tr>
+		<tr><td>{{ crisis.kind }}</td></tr>
+		<tr><td>{{ crisis.date }}</td></tr>
+		<tr><td>{{ crisis.locations|safe }}</td></tr>
+		<tr><td>
+			{% for p in r_people %}
+				{{ p.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>
+			{% for o in r_orgs %}
+				{{ o.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>{{ crisis.humanImpact|safe }}</td></tr>
+		<tr><td>{{ crisis.economicImpact|safe }}</td></tr>
+		<tr><td>{{ crisis.resources|safe }}</td></tr>
+		<tr><td>{{ crisis.waysToHelp|safe }}</td></tr>
+		<tr><td>{{ crisis.citations|safe }}</td></tr>
+		<tr><td>{{ crisis.extLinks|safe }}</td></tr>
+		<tr><td>{{ crisis.images|safe }}</td></tr>
+		<tr><td>{{ crisis.videos|safe }}</td></tr>
+		<tr><td>{{ crisis.maps|safe }}</td></tr>
+		<tr><td>{{ crisis.feeds|safe }}</td></tr>
+		<tr><td>{{ crisis.summary }}</td></tr>
+	</table>
+{% else %}
+	<p>Crisis was not found.</p>	
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if person %}
+
+	
+	<div class="head">
+		<div class="container">
+      			<div class="row">
+        	 		<div class="span12">
+        	    			<!-- Some text -->
+        	   			<p class="head-one">{{ person.name }}</p>
+        	   			<p class="head-two">WCDB ID: {{ person.wcdb_id }}</p>
+        	 		</div>
+      			</div>
+   		</div>
+	</div>
+
+
+
+
+
+
+	
+	
+<table class="table table-striped">
+		<tr><td>Name: {{ person.name }}</td></tr>
+		<tr><td>WCDB ID: {{ person.wcdb_id }}</td></tr>
+		<tr><td>Kind: {{ person.kind }}</td></tr>
+		<tr><td>Location: {{ person.location }}</td></tr>
+		<tr><td>Relevant Organizations:
+			{% for o in r_orgs %}
+				{{ o.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>Relevant Crises:
+			{% for c in r_crises %}
+				{{ c.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>Citations: {{ person.citations|safe }}</td></tr>
+		<tr><td>External Links: {{ person.extLinks|safe }}</td></tr>
+		<tr><td>{{ imgs|safe }}</td></tr>
+		<tr><td>{{ vids|safe }}</td></tr>
+		<tr><td>{{ maps|safe }}</td></tr>
+<!-- 		<tr><td>{{ person.images|safe }}</td></tr>
+		<tr><td>{{ person.videos|safe }}</td></tr>
+		<tr><td>{{ person.maps|safe }}</td></tr> -->
+		<tr><td>Feeds: {{ person.feeds|safe }}</td></tr>
+		<tr><td>{{ person.summary }}</td></tr>
+	</table>
+
+    		
+{% else %}
+	<p>Person was not found.</p>	
+{% endif %}
+
+{% endblock %}

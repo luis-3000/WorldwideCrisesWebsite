@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if crises_list %}
+    <table class="table table-striped">
+    <thead>
+    	<tr>
+    		<th>Crisis</th>
+    		<th>Kind</th>
+    		<th>Date</th>
+    	</tr>
+    </thead>
+    <tbody>
+    {% for crisis in crises_list %}
+    <tr>
+        <td><a href="/crisis/{{ crisis.id }}/">{{ crisis.name }}</a></td>
+        <td>{{ crisis.kind }}</td>
+        <td>{{ crisis.date }}</td>
+<!-- 		<li>{{ crisis.name }}</li>
+    	<li>{{ crisis.wcdb_id }}</li>  
+		<li>{{ crisis.name }}</li>  
+		<li>{{ crisis.people }}</li>  
+		<li>{{ crisis.organizations }}</li>  
+		<li>{{ crisis.kind }}</li>  
+		<li>{{ crisis.date }}</li>  
+		<li>{{ crisis.locations }}</li>  
+		<li>{{ crisis.humanImpact }}</li>  
+		<li>{{ crisis.economicImpact }}</li>  
+		<li>{{ crisis.resources }}</li>  
+		<li>{{ crisis.waysToHelp }}</li>  
+		<li>{{ crisis.citations }}</li>  
+		<li>{{ crisis.extLinks }}</li>  
+		<li>{{ crisis.images }}</li>  
+		<li>{{ crisis.videos }}</li>  
+		<li>{{ crisis.maps }}</li>  
+		<li>{{ crisis.feeds }}</li>  
+		<li>{{ crisis.summary }}</li>   -->
+	</tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% else %}
+    <p>No crises are available.</p>	
+{% endif %}
+
+{% endblock %}

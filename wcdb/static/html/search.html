@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+	{% block content %}
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Queries</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for query in query_string %}
+					<tr>
+						<td><a href="/{{query.model_type}}/{{ query.id }}/">{{query.name}}</a></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+	{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if org %}
+	<table class="table table-striped">
+		<tr><td>Name: {{ org.name}}</td></tr>
+		<tr><td>WCDB ID: {{ org.wcdb_id }}</td></tr>
+		<tr><td>Kind: {{ org.kind }}</td></tr>
+		<tr><td>Location: {{ org.location }}</td></tr>
+		<tr><td>Relevant People:
+			{% for p in r_people %}
+				{{ p.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>Relevant Crises
+			{% for c in r_crises %}
+				{{ c.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>History: {{ org.history|safe }}</td></tr>
+		<tr><td>Contact: {{ org.contact|safe }}</td></tr>
+		<tr><td>Citations: {{ org.citations|safe }}</td></tr>
+		<tr><td>External Links: {{ org.extLinks|safe }}</td></tr>
+		<tr><td>{{ imgs|safe }}</td></tr>
+		<tr><td>{{ vids|safe }}</td></tr>
+		<tr><td>{{ maps|safe }}</td></tr>
+<!-- 		<tr><td>{{ org.images|safe }}</td></tr>
+		<tr><td>{{ org.videos|safe }}</td></tr>
+		<tr><td>{{ org.maps|safe }}</td></tr> -->
+		<tr><td>Feeds: {{ org.feeds|safe }}</td></tr>
+		<tr><td>{{ org.summary }}</td></tr>
+
+	</table>
+{% else %}
+	<p>Organization was not found.</p>	
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if person %}
+	<table class="table table-striped">
+		<tr><td>{{ person.name}}</td></tr>
+		<tr><td>{{ person.wcdb_id }}</td></tr>
+		<tr><td>{{ person.kind }}</td></tr>
+		<tr><td>{{ person.location }}</td></tr>
+		<tr><td>
+			{% for o in r_orgs %}
+				{{ o.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>
+			{% for c in r_crises %}
+				{{ c.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>{{ person.citations|safe }}</td></tr>
+		<tr><td>{{ person.extLinks|safe }}</td></tr>
+		<tr><td>{{ person.images|safe }}</td></tr>
+		<tr><td>{{ person.videos|safe }}</td></tr>
+		<tr><td>{{ person.maps|safe }}</td></tr>
+		<tr><td>{{ person.feeds|safe }}</td></tr>
+		<tr><td>{{ person.summary }}</td></tr>
+
+	</table>
+{% else %}
+	<p>Person was not found.</p>	
+{% endif %}
+
+{% endblock %}

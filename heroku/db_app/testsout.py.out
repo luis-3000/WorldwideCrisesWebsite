@@ -1,0 +1,2 @@
+./testsout.py: line 6: $'\nThis file demonstrates writing tests using the unittest module. These will pass\nwhen you run manage.py': command not found
+from: can't read /var/mail/models

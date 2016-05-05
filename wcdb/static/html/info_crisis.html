@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if crisis %}
+	<table class="table table-striped">
+	<tbody>
+		<tr><td>Name: {{ crisis.name }}</td></tr>
+		<tr><td>WCDB ID: {{ crisis.wcdb_id }}</td></tr>
+		<tr><td>Kind: {{ crisis.kind }}</td></tr>
+		<tr><td>Date: {{ crisis.date }}</td></tr>
+		<tr><td>Location: {{ crisis.locations|safe }}</td></tr>
+		<tr><td>Relevant People:
+			{% for p in r_people %}
+				{{ p.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>Relevant Organizations:
+			{% for o in r_orgs %}
+				{{ o.name }}{% include "comma.html" %}
+			{% endfor %}
+		</td></tr>
+		<tr><td>Human Impact: {{ crisis.humanImpact|safe }}</td></tr>
+		<tr><td>Economic Impact: {{ crisis.economicImpact|safe }}</td></tr>
+		<tr><td>Resources: {{ crisis.resources|safe }}</td></tr>
+		<tr><td>Ways to Help: {{ crisis.waysToHelp|safe }}</td></tr>
+		<tr><td>Citations: {{ crisis.citations|safe }}</td></tr>
+		<tr><td>External Links: {{ crisis.extLinks|safe }}</td></tr>
+		<tr><td>{{ imgs|safe }}</td></tr>
+		<tr><td>{{ vids|safe }}</td></tr>
+		<tr><td>{{ maps|safe }}</td></tr>
+<!-- 		<tr><td>{{ crisis.images|safe }}</td></tr>
+		<tr><td>{{ crisis.videos|safe }}</td></tr>
+		<tr><td>{{ crisis.maps|safe }}</td></tr> -->
+		<tr><td>Feeds: {{ crisis.feeds|safe }}</td></tr>
+		<tr><td>{{ crisis.summary }}</td></tr>
+	</tbody>
+	</table>
+{% else %}
+	<p>Crisis was not found.</p>	
+{% endif %}
+{% endblock %}

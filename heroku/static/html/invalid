@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+Invalid login credentials.
+<form action="/login/">
+	<input type="submit" value="Try again" class="btn">
+</form>
+
+{% endblock %}
